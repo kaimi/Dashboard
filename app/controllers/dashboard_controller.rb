@@ -1,5 +1,5 @@
 class DashboardController < ApplicationController
-  caches_page :lists
+  caches_page :lists, :expires_in => 15.minutes
   
   def index
   end

@@ -51,20 +51,27 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li><%= link_to "Start", "/"  %></li>
-              <li><%= link_to "Mailinglisten", dashboard_lists_path  %></li>
-              <li><%= link_to "Wiki", dashboard_wiki_url  %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-          <%= bootstrap_flash %>
-          <%= yield %>
-        </div>
+        <% if controller.action_name != "index" %>
+          <div class="span3">
+            <div class="well sidebar-nav">
+              <ul class="nav nav-list">
+                <li class="nav-header">Meü</li>
+                <li><%= link_to "Start", "/"  %></li>
+                <li><%= link_to "Mailinglisten", dashboard_lists_path  %></li>
+                <li><%= link_to "Wiki", dashboard_wiki_url  %></li>
+              </ul>
+            </div><!--/.well -->
+          </div><!--/span-->
+          <div class="span9">
+            <%= bootstrap_flash %>
+            <%= yield %>
+          </div>
+        <% else %>
+          <div class="span12">
+            <%= bootstrap_flash %>
+            <%= yield %>
+          </div>
+        <% end %>
       </div><!--/row-->
 
       <footer>

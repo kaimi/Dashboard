@@ -1,0 +1,6 @@
+<h4><%= list_name %></h4>
+<ul>
+  <% last_threads_list(list_name).each do |thread| %>
+    <li><%= thread.html_safe %></li>
+  <% end %>
+</ul>

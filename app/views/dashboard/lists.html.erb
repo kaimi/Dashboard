@@ -1,0 +1,22 @@
+<%# cache do %>
+<div class="row">
+<h3 id="lists-header">Mailinglisten</h3>
+<div id="lists" class="span9">
+<div class="row">
+<div class="span3">
+  <%= render :partial => "mailinglist", :locals => { :list_name => "20piraten" } %> 
+</div>
+<div class="span3">
+  <%= render :partial => "mailinglist", :locals => { :list_name => "20piraten-info" } %> 
+</div>
+<div class="span3">
+  <%= render :partial => "mailinglist", :locals => { :list_name => "fraktionen-europa" } %> 
+</div>
+</div>
+<div class="row">
+<div class="span4">
+  <%= render :partial => "mailinglist", :locals => { :list_name => "pm" } %> 
+</div>
+</div>
+</div>
+<%# end %>
